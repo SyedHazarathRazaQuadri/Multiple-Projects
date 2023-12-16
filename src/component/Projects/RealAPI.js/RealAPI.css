@@ -1,0 +1,47 @@
+.user-section{
+    background: url('./bg-nature.webp');
+    box-shadow: 2px 1px 4px gray;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    width: 360px;
+    height: 320px;
+    border-radius: 30px;
+    position: relative;
+}
+.tracking-normal{
+    font-weight: bold;
+    font-size: 18px;
+}
+.leading-relaxed{
+    font-size: 15px;
+}
+.read-button{
+    position: absolute;
+    bottom: 1rem;
+}
+.card-number{
+    display: inline-block;
+    background-color: #79dc79;
+    color: white;
+    padding: 2px 11px;
+    border-radius: 50%;
+}
+.card-number, .card-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+button{
+    color: white;
+    margin-top: 10px;
+    padding: 6px 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #89a9f3;
+}
+.all-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

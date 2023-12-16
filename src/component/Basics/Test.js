@@ -1,5 +1,6 @@
 import React from 'react'
-const data = [
+import Restarent from './Restarent';
+const list = [
     {
         State: "Uttar Pradesh",
         Capital: "Lucknow",
@@ -22,14 +23,19 @@ const data = [
     },
 ];
 function Test() {
-    const syed = list.map((item) => " Hi " + item);
+    const listData = list.map((item) => {
+       return <option>{item.State}</option>
+    });
+    const uniq = {
+        fontSize : "40px",
+        margin: "1rem 2rem"
+    }
   return (
     <>
-        <ul id="uniq">
-            <li>{syed}</li>
-        </ul>
+        <select style={uniq}>{listData}</select>
+        <Restarent />,
     </>
   )
 }
 
-export default Test
+export default Test;

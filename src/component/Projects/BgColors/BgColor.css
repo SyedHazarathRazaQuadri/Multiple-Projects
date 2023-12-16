@@ -1,0 +1,28 @@
+.common-color{
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.redcolor{
+    background-color: red;
+}
+.greencolor{
+    background-color: green;
+}
+.bluecolor{
+    background-color: blue;
+}
+.olivecolor{
+    background-color: olive;
+}
+.yellowcolor{
+    background-color: yellow;
+    color: black;
+}
+.purplecolor{
+    background-color: purple;
+}
+.blackcolor{
+    background-color: black;
+}

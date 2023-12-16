@@ -6,7 +6,6 @@ const MenuCard = ({MenuData}) => {
       <section className="main-card--cointainer">
         {MenuData.map((curElem) => {
           const { id, name, category, image, description } = curElem;
-
           return (
             <>
               <div className="card-container" key={id}>

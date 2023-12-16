@@ -1,0 +1,27 @@
+.counter-section{
+    text-align: center; 
+    font-size: 40px; 
+    color: white;
+    background: tan;
+    padding: 1rem;
+}
+.minus-button{
+    font-size: 17px;
+    margin: 0 10px; 
+    padding: 6px 23px; 
+    color: white; 
+    border-radius: 16px; 
+    cursor: pointer; 
+    border: none; 
+    background: #f55858;
+}
+.plus-button{
+    font-size: 17px;
+    margin: 0 10px; 
+    padding: 6px 23px; 
+    color: white; 
+    border-radius: 16px; 
+    cursor: pointer; 
+    border: none; 
+    background: #12ae12;
+}
