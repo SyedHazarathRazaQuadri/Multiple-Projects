@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import './TodoList.css'
 
 function TodoList() {
-    // let [time, setTime] = useState(0)
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         setTime((time => time + 1))
-    //     }, 1000)
-    // })
-
-    const [userData, setUserData] = useState('');           //here in this state typed data will show directly
-    const getUserDetails = (event) =>{
-            setUserData(event.target.value)
+    const [task, SetTask] = useState('');
+    const [todos,  setTodos] =useState([])
+    const taskHandler =(e)=>{
+        SetTask(e.target.value)
     }
-
-    const [showDetails, setShowDetails] = useState()        //here in this state typed data will show when you click on button
-    const showData = (e) =>{
-        e.preventDefault();                //this preventDefault() will prevent from page refresh
-        setShowDetails(userData)
+    const submitHandler= (e)=>{
+        e.preventDefault()
+        const newTodos = [...todos, task]
+        setTodos(newTodos);
+        SetTask('')
+    }
+    const deleteTodo = (indexVal)=>{
+        const Delete = todos.filter((todo, index)=> index !== indexVal);
+        setTodos(Delete)
     }
   return (
     <div className='text-center'>
         <h1 className='text-center text-6xl font-bold text-yellow-500 underline'>My Todo List</h1>
-        <form onSubmit={showData}>
-            <input className='px-3 py-2 mt-10' type="text" placeholder='Add your Task' onChange={getUserDetails} />
-            <button className='rounded-xl bg-blue-500 text-white ml-4 px-5 py-2' type='submit'>Add</button>
-        </form>
-        <ul><li>{showDetails}</li></ul>
-        {/* <h1 className='text-center text-6xl'>I am rendered {time} times</h1> */}
+            <form onSubmit={submitHandler}>
+            <input value={task} onChange={taskHandler} className='px-3 border py-2 mt-10' type="text" placeholder='Add your Task' />
+            <input className='cursor-pointer rounded-xl bg-blue-500 text-white ml-4 px-5 py-2' value="Add" type='submit' name='Add' />
+            </form>
+            <ul>
+                {todos.map((todoItem)=>{
+                   return <li>{todoItem}<span onClick={deleteTodo}>❌</span></li>
+                })}
+            </ul>
     </div>
   )
 }

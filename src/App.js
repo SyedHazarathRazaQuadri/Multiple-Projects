@@ -1,24 +1,25 @@
-import { React, useState } from "react";
-import List from "./component/Projects/SearchBar/List"
+import React from "react";
 import "./App.css";
 import RealAPI from "./component/Projects/RealAPI.js/RealAPI";
+import AxiosAPI from "./component/Projects/AxiosApi/AxoisApi";
+import UniversitiesApi from "./component/Projects/UniversitiesApi/UniversitiesApi";
+import TableSearch from "./component/Projects/TableSearch/TableSearch";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TodoList from "./component/Projects/TodoList/TodoList";
 
 function App() {
   return (
     <>
-        {/* <h1>React Search</h1>
-        <div className="search">
-          <textarea
-            id="outlined-basic"
-            rows={2}
-            cols={45}
-            variant="outlined"
-            fullWidth
-            label="Search"
-          />
-        </div>
-        <List /> */}
-      <RealAPI />
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<RealAPI />}/>
+      <Route path="/home" element={<RealAPI />}/>
+      <Route path="/rest-api" element={<AxiosAPI />}/>
+      <Route path="/universities" element={<UniversitiesApi />}/>
+      <Route path="/table" element={<TableSearch />}/>
+      <Route path="/todo" element={<TodoList />} />
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }

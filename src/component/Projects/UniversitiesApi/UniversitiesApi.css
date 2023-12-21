@@ -1,0 +1,49 @@
+.university{
+    box-shadow: 2px 1px 4px gray;
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+    width: 280px;
+    height: 200px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #b2ebae;
+}
+.uname{
+    font-weight: bold;
+    font-size: 18px;
+}
+.country{
+    font-size: 15px;
+}
+.read-button{
+    position: absolute;
+    bottom: 1rem;
+}
+.web_url{
+    display: inline-block;
+    color: white;
+    padding: 2px 11px;
+    border-radius: 50%;
+}
+.web_url, .uname{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+button{
+    color: white;
+    margin-top: 10px;
+    padding: 6px 18px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #635ed0;
+    position: absolute;
+    bottom: 1rem;
+    width: 135px;
+}
+.all_universities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
