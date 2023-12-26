@@ -5,10 +5,9 @@ import BgColors from "./component/Projects/BgColors/BgColor";
 import UniversitiesApi from "./component/Projects/UniversitiesApi/UniversitiesApi";
 import TableSearch from "./component/Projects/TableSearch/TableSearch";
 import { Route, Routes } from "react-router-dom";
-import TodoList from "./component/Projects/TodoList/TodoList";
-import Parent from "./component/Projects/TwoComponents/Parent";
 import Counter from "./component/Projects/Counter/Counter";
 import NavBar from "./component/NavBar/NavBar";
+import PropsDrilling from './component/Projects/PropsDrilling/GrandParent'
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
       <Route path="/universities" element={<UniversitiesApi />}/>
       <Route path="/table" element={<TableSearch />}/>
       <Route path="/counter" element={<Counter />} />
+      <Route path="/props-drilling" element={<PropsDrilling />} />
     </Routes>
     </>
   );
