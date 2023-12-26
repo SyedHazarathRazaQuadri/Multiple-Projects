@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import styles from './Counter.css'
 
+document.querySelector('body').style.backgroundColor = 'white';
+
 function Counter() {
 let [counter, setCounter] = useState(0)
 
 let addValue = () =>{
-  document.querySelector('.counter-section').style.backgroundColor = 'green';
+  document.querySelector('body').parentNode.style.backgroundColor = 'green';
     counter !== 20 ? counter = counter + 1 : counter = 20
     setCounter(counter)
 }
 let removeValue = () =>{
-  document.querySelector('.counter-section').style.backgroundColor = 'red';
+  document.querySelector('body').parentNode.style.backgroundColor = 'red';
     counter !== 0 ? counter = counter - 1 : counter = 0
     setCounter(counter)
 }
@@ -18,8 +20,8 @@ let removeValue = () =>{
     <>
     <div className='counter-section'>
         <div>Count is: {counter}</div>
-        <button className='minus-button' onClick={removeValue}>Minus</button>
-        <button className='plus-button' onClick={addValue}>Plus</button>
+        <input className='minus-button' type='button' value="Minus" onClick={removeValue} />
+        <input className='plus-button' type='button' value="Plus" onClick={addValue} />
     </div>
     </>
   )

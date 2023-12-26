@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './RealAPI.css'
 
 const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+document.querySelector('body').style.backgroundColor = 'white';
 
 function RealAPI() {
 const [user, setUser] = useState([]);

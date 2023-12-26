@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import TableData from './TableData.json'
 
+document.querySelector('body').style.backgroundColor = 'white';
+
 function TableSearch() {
     const [searchResults, setSearchResults] = useState('');
   return (
@@ -17,7 +19,7 @@ function TableSearch() {
             </thead>
             <tbody>
             {TableData.filter((item)=>{
-                return searchResults.toLocaleUpperCase() === '' ? item : item.first_name.toLocaleLowerCase().includes(searchResults), searchResults.toLocaleLowerCase() === '' ? item : item.email.toLocaleLowerCase().includes(searchResults)
+                return searchResults.toLocaleLowerCase() === '' ? item : item.first_name.toLocaleLowerCase().includes(searchResults)
             }).map((item)=>{
                 const {id, first_name, last_name, email, gender} = item;
                 return(
