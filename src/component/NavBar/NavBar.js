@@ -18,7 +18,7 @@ function NavBar() {
             <Link to="/universities"><li>Universities</li></Link>
             <Link to="/table"><li>Table Search</li></Link>
             <Link to="/counter"><li>Counter</li></Link>
-            <Link to="props-drilling"><li>PropsDrilling</li></Link>
+            <Link to="use-context"><li>useContext</li></Link>
         </ul>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import RealAPI from "./component/Projects/RealAPI.js/RealAPI";
+import RestAPI from "./component/Projects/RestAPI/RestAPI";
 import BgColors from "./component/Projects/BgColors/BgColor";
 import UniversitiesApi from "./component/Projects/UniversitiesApi/UniversitiesApi";
 import TableSearch from "./component/Projects/TableSearch/TableSearch";
@@ -14,13 +14,13 @@ function App() {
     <>
     <NavBar />
     <Routes>
-      <Route index element={<RealAPI />}/>
-      <Route path="/home" element={<RealAPI />}/>
+      <Route index element={<RestAPI />}/>
+      <Route path="/home" element={<RestAPI />}/>
       <Route path="/multi-bg-colors" element={<BgColors />}/>
       <Route path="/universities" element={<UniversitiesApi />}/>
       <Route path="/table" element={<TableSearch />}/>
       <Route path="/counter" element={<Counter />} />
-      <Route path="/props-drilling" element={<PropsDrilling />} />
+      <Route path="/use-context" element={<PropsDrilling />} />
     </Routes>
     </>
   );

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './RealAPI.css'
+import './RestAPI.css'
 
 const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 document.querySelector('body').style.backgroundColor = 'white';
 
-function RealAPI() {
+function RestAPI() {
 const [user, setUser] = useState([]);
 
 useEffect(()=>{
@@ -38,4 +38,4 @@ useEffect(()=>{
   )
 }
 
-export default RealAPI
+export default RestAPI
