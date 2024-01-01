@@ -22,7 +22,7 @@ const customReducerFunction = (state, action)=>{
             return {...state, loading: false, data: action.payload}
         case dataError:
             return {...state, loading: false, error: action.payload}
-        default:
+        default: return state;
     }
 }
 
